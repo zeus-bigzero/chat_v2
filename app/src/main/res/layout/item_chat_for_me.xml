@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#292F3F"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="08:12" />
+
+    <!--   Layout của user chat -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMsgOther"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/tvMsgOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_msg_other"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="6dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Next month?" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRemoveYou"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/imgYou"
+            app:layout_constraintStart_toEndOf="@id/ivDownloadYou"
+            app:layout_constraintTop_toTopOf="@id/imgYou"
+            app:srcCompat="@drawable/icon_remove" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDownloadYou"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/imgYou"
+            app:layout_constraintStart_toEndOf="@id/imgYou"
+            app:layout_constraintTop_toTopOf="@id/imgYou"
+            app:srcCompat="@drawable/icon_download" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgYou"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="16:12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            app:srcCompat="@drawable/img_demo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--   Layout của bản thân -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMsgSelf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/tvMsgSelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_msg_self"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="6dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="I am in a process of designing some. When do you need them?" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRemove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/img"
+            app:layout_constraintEnd_toStartOf="@id/ivDownload"
+            app:layout_constraintTop_toTopOf="@id/img"
+            app:srcCompat="@drawable/icon_remove" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDownload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/img"
+            app:layout_constraintEnd_toStartOf="@id/img"
+            app:layout_constraintTop_toTopOf="@id/img"
+            app:srcCompat="@drawable/icon_download" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="16:12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            app:srcCompat="@drawable/img_demo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
